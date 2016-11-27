@@ -5,6 +5,7 @@
  */
 package controller;
 
+import dao.LogicaProfesor;
 import dto.Profesor;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
@@ -19,7 +20,7 @@ import java.io.Serializable;
 public class ProfesorController implements Serializable {
 
     private Profesor profesor;
-    private ProfesorController profesorController;
+    private LogicaProfesor logProfesor;
     private int recordCount = 1000;
     private int pageSize = 10;
     private Profesor current;
@@ -33,6 +34,19 @@ public class ProfesorController implements Serializable {
     }
     
     /** Creates a new instance of FilmController */
+    
+
+    
+
+    /*public Profesor getSelected{
+        if (current == null) {
+            current = new Profesor();
+            selectedItemIndex = -1;
+        }
+        return current;*
+    }*/
+
+
     
     
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/11/2016 08:01:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dto.Matricula" table="matricula" catalog="mydb" optimistic-lock="version">
+        <id name="radicado" type="java.lang.Integer">
+            <column name="Radicado" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="curso" class="dto.Curso" fetch="select">
+            <column name="Curso_id_Curso" not-null="true" />
+        </many-to-one>
+        <many-to-one name="estudiante" class="dto.Estudiante" fetch="select">
+            <column name="Estudiante_Tipo_Documento" length="5" not-null="true" />
+            <column name="Estudiante_Documento" length="45" not-null="true" />
+        </many-to-one>
+        <property name="fechaInscripcion" type="timestamp">
+            <column name="Fecha_Inscripcion" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
